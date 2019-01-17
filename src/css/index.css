@@ -1,3 +1,85 @@
+body, h2 {
+  font: 100% "Catamaran", sans-serif; }
 
+.container {
+  display: flex;
+  flex-direction: column; }
+
+header {
+  text-align: center;
+  padding-top: 1.5rem; }
+  header.sub-header {
+    padding: 3rem; }
+
+.navbar-nav {
+  margin-left: auto; }
+  .navbar-nav .nav-link {
+    color: #adb3b8;
+    text-decoration: none;
+    text-decoration-color: initial; }
+
+#basket {
+  align-self: center;
+  margin-left: auto; }
+
+.sub-nav {
+  padding: 2rem; }
+
+.grid-md {
+  padding-top: 2em; }
+
+.bg-sea {
+  background-color: #9ab4b3; }
+
+.bg-white {
+  background-color: #fff; }
+
+.font-white {
+  color: #fff; }
+
+.font-sea {
+  color: #9ab4b3; }
+
+.take-look {
+  max-width: 24rem; }
+
+.absolute {
+  position: absolute; }
+
+.short-hr {
+  max-width: 3rem;
+  border-color: #fff; }
+
+.img-lg {
+  width: 100%; }
+
+.img-md {
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover; }
+
+.img-sm {
+  width: 100%;
+  height: 30% !important;
+  object-fit: cover;
+  padding-bottom: 1.6rem; }
+
+.social-wrapper {
+  align-self: center;
+  width: 400px;
+  padding: 2rem; }
+  .social-wrapper .social-parent {
+    display: flex;
+    justify-content: center; }
+    .social-wrapper .social-parent .social-icon > a {
+      color: #b0b6c8;
+      padding: 15px;
+      border: 1px solid #c8ccd0;
+      border-radius: 50%; }
+
+footer {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 15rem; }
 
 /*# sourceMappingURL=index.css.map */
