@@ -130,6 +130,7 @@ body, h2 {
   .thumbnail-container {
     position: relative;
     padding-top: 15px;
+    
     .img-md {
       height: 100%!important;
       max-height: 350px;
@@ -137,6 +138,7 @@ body, h2 {
       object-fit: cover;
     }
     .thumbnail-caption-container {
+      min-height: 100px;
       background-color: $white-color;
       position: absolute;
       bottom: 10%;
@@ -146,6 +148,10 @@ body, h2 {
       box-shadow:
       0 0 0 1px rgb(201, 211, 211),
       0 0 0 5px hsl(0, 0%, 100%);
+      h5 {
+        padding-top: 10px;
+
+      }
     }
   }
   

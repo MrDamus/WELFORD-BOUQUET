@@ -131,6 +131,7 @@ header.sub-header {
   object-fit: cover;
 }
 .thumbnail-container .thumbnail-caption-container {
+  min-height: 100px;
   background-color: #fff;
   position: absolute;
   bottom: 10%;
@@ -138,6 +139,9 @@ header.sub-header {
   right: 10%;
   padding: 10px;
   box-shadow: 0 0 0 1px #c9d3d3, 0 0 0 5px white;
+}
+.thumbnail-container .thumbnail-caption-container h5 {
+  padding-top: 10px;
 }
 
 .img-sm {
