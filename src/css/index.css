@@ -35,6 +35,7 @@ body, h2 {
     display: flex; }
   body .take-look, h2 .take-look {
     max-width: 24rem;
+    max-height: 330px;
     display: flex;
     flex-direction: column; }
   body .sale-color, h2 .sale-color {
@@ -47,7 +48,7 @@ body, h2 {
       bottom: 10%;
       left: 10%;
       right: 10%;
-      padding: 20px;
+      padding: 10px;
       box-shadow: 0 0 0 1px #c9d3d3, 0 0 0 5px white; }
   body .short-hr, h2 .short-hr {
     width: 3rem;
@@ -55,6 +56,7 @@ body, h2 {
   body .img-lg, h2 .img-lg {
     width: 100%; }
   body .img-md, h2 .img-md {
+    height: 100% !important;
     max-height: 350px;
     width: 100%;
     object-fit: cover; }
@@ -72,9 +74,13 @@ body, h2 {
       justify-content: center; }
       body .social-wrapper .social-parent .social-icon > a, h2 .social-wrapper .social-parent .social-icon > a {
         color: #b0b6c8;
-        padding: 15px;
         border: 1px solid #c8ccd0;
-        border-radius: 50%; }
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
   body footer, h2 footer {
     text-align: center;
     padding-top: 2rem;
