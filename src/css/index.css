@@ -95,7 +95,8 @@ header {
   display: flex; }
 
 .thumbnail-container {
-  position: relative; }
+  position: relative;
+  padding-top: 15px; }
   .thumbnail-container .img-md {
     height: 100% !important;
     max-height: 350px;
