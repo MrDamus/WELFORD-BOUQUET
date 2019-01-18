@@ -2,9 +2,14 @@ variables sass
 import 
 sale
 img overlay
-search input po kliknieciu
-optymalizowac obrazki
-deployment na gh pages aby czytalo z directory 
+search input after click
+optimize images
+deployment on gh pages so it reads from directory 
 
-w package json skrypt do odpalania srodowiska lokalnego, lokalnie zainstalowany parcel
-przerobic na komponenty jsx
+in package json script for local enviroment (lokalnie zainstalowany parcel)
+
+rework components on jsx
+
+fix socials
+media queries
+at the end try view on mobiles to make sure how it looks
