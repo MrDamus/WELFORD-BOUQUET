@@ -8,7 +8,7 @@
     "sass": "^1.16.0"
   },
   "scripts": {
-    "sass": "sass --watch src/sass/index.scss:src/css/index.css",
+    "sass": "sass --watch src/sass/main.scss:src/css/index.css",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   }

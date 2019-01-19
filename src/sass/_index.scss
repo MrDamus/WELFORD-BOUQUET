@@ -1,0 +1,74 @@
+body, h2 {
+  font: 100% $font-stack;
+}
+  a{
+    color: $primary-color;
+  }
+  
+  header {
+    text-align: center;
+    padding-top: 1.5rem;
+    &.sub-header {
+      padding: 3rem;
+    }
+  }
+  
+  #navbar {
+    .navbar-nav {
+      margin-left: auto;
+      .nav-link {
+        color: $primary-color!important;
+        font-weight: bold;
+      }
+    }
+    
+    #basket {
+      align-self: center;
+      margin-left: auto;
+    }
+  }
+    
+  .sub-nav {
+    padding: 2rem;
+    
+  }
+
+  .price-color {
+    color: $sea-color;
+    margin-left: 1rem;
+  }
+  
+  .bg-sea {
+    background-color: $sea-color;
+  }
+
+  .font-cormorant {
+    font-family: $font-special;
+  }
+  
+  .font-white {
+    color: $white-color;
+  }
+  
+  .font-sea {
+    color: $sea-color;
+  }
+  
+  .align-content-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .img-sm {
+    width: 100%;
+    height: 30%!important;
+    object-fit: cover;
+    padding-bottom: 1.6rem;
+  }
+    
+  footer {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+  }

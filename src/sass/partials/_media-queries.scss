@@ -1,0 +1,20 @@
+@media (max-width: 575.98px) {
+  .thumbnail-container {
+    .thumbnail-caption-container {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 794px) {
+  .thumbnail-container {
+    .thumbnail-caption-container {
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+    }
+  }
+  .img-md {
+    max-height: 260px;
+  }
+}
