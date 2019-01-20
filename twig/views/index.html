@@ -11,7 +11,7 @@
   integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
   crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:300|Cormorant+Upright:300" rel="stylesheet">
-  <link rel="stylesheet" href="./src/css/index.css">
+  <link rel="stylesheet" href="{{src_css}}/index.css">
   <title>WELFORD BOUQUET</title>
 </head>
 <body>
@@ -39,27 +39,11 @@
       
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav mt-2 mt-lg-0">
+            {% for link in menu %}
             <li class="nav-item">
-              <a class="nav-link" href="#">HOME</a>
+              <a class="nav-link" href="#">{{ link }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SHOP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">OUR STORY</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">EXIBITIONS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">COMMISSIONS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
-            </li>
+            {% endfor %}
           </ul>
           <div class="nav-item" id="basket">
             <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
@@ -71,7 +55,7 @@
   <div class="container">
     <div class="row take-a-look-container">
       <div class="col-md-6">
-        <img class="img-lg" src="./src/assets/amy-shamblen-662202-unsplash.jpg" alt="">
+        <img class="img-lg" src="{{src_assets}}/amy-shamblen-662202-unsplash.jpg" alt="">
       </div>
       <div class="col-md-6 text-center column bg-sea align-content-center">
         <div class="mx-auto take-a-look font-white">
@@ -82,27 +66,15 @@
       </div>
     </div>
     <div class="row grid-md">
+      {% for thumbnail in thumbnails %}
       <div class="col-md-4 col-6  thumbnail thumbnail-container">
-        <img class="img-md" src="./src/assets/thomas-ae-602202-unsplash.jpg" alt="">
+        <img class="img-md" src="{{src_assets}}/{{thumbnail.src}}" alt="">
         <div class="thumbnail thumbnail-caption-container text-center">
-          <h5 class="font-sea">THE MAKING</h5>
-          <p class="font-cormorant">Our yarn is 100% British.</p>
+          <h5 class="font-sea">{{thumbnail.title}}</h5>
+          <p class="font-cormorant">{{thumbnail.subtitle}}</p>
         </div>
       </div>
-      <div class="col-md-4 col-6  thumbnail thumbnail-container">
-        <img class="img-md" src="./src/assets/beatriz-perez-moya-191993-unsplash.jpg" alt="">
-        <div class="thumbnail thumbnail-caption-container text-center">
-          <h5 class="font-sea">OUR STORY</h5>
-          <p class="font-cormorant">A family run business.</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-12  thumbnail thumbnail-container">
-        <img class="img-md" src="./src/assets/tom-the-photographer-651516-unsplash.jpg" alt="">
-        <div class="thumbnail thumbnail-caption-container text-center">
-          <h5 class="font-sea">COMMISSIONS</h5>
-          <p class="font-cormorant">Furnishing & upholstery</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <div>
       <header class="sub-header">
@@ -115,61 +87,45 @@
       </header>
     </div>
     <div class="row">
+      {% for product in products %}
       <div class="col-lg-3 col-md-6 column text-center grid-sm">
         <div class="sale sale-container">
-          <div class="sale sale-text font-italic font-cormorant">Sale</div>
+          {% if product.last_price > 0 %}
+            <div class="sale sale-text font-italic font-cormorant">Sale</div>
+          {% endif %}
         </div>
-          <img class="img-fluid img-sm" src="./src/assets/monika-grabkowska-664428-unsplash.jpg" alt="">
-          <h6>WEST CLIFF</h6>
-          <p class="text-muted"><del>£290.00</del><span class="price-color">£250.00</span></p>
+          <img class="img-fluid img-sm" src="{{src_assets}}/{{product.src}}" alt="">
+          <h6>{{product.title}}</h6>
+          <p class="text-muted">
+            {% if product.last_price > 0 %}
+              <del>£{{product.last_price}}</del>
+              <span class="price-color">£{{product.price}}</span>
+            {% else %}
+              <span >£{{product.price}}</span>
+            {% endif %}
+          </p>
       </div>
-      <div class="col-lg-3 col-md-6 column text-center">
-          <img class="img-fluid img-sm" src="./src/assets/tanalee-youngblood-344759-unsplash.jpg" alt="">
-          <h6>ESK</h6>
-          <p class="text-muted">£110.00</p>
-      </div>
-      <div class="col-lg-3 col-md-6 column text-center">
-          <img class="img-fluid img-sm" src="./src/assets/alexandra-gorn-328026-unsplash.jpg" alt="">
-          <h6>SANDSEND</h6>
-          <p class="text-muted">£360.00</p>
-        </div>
-      <div class="col-lg-3 col-md-6 column text-center">
-          <img class="img-fluid img-sm" src="./src/assets/christie-kim-769380-unsplash.jpg" alt="">
-          <h6>WEST CLIFF CUSHION</h6>
-          <p class="text-muted">£250.00</p>
-        </div>
+      {% endfor %}
     </div>
   </div>
   <div class="sub-nav">
     <ul class="nav justify-content-center text-muted">
+      {% for link in bottom_nav %}
       <li class="nav-item">
-        <a class="nav-link" href="#">FAQ</a>
+        <a class="nav-link" href="#">{{ link }}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">DELIVERY & RETURNS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">TERMS & CONDITIONS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CONTACT US</a>
-      </li>
+      {% endfor %}
     </ul>
   </div>
   <div class="container social-container">
     <div class="row social-wrapper">
-      <div class="col-4 social-parent">
+      {% for icon in socials %}
+      <div class="col-sm-4 social-parent">
         <div class="social-icon">
-          <a href="#"><i class="fab fa-twitter"></i></a></div>
+          <a href="#"><i class="fab fa-{{icon}}"></i></a>
         </div>
-      <div class="col-4 social-parent">
-        <div class="social-icon">
-          <a href="#"><i class="fab fa-facebook-square"></i></a></div>
-        </div>
-      <div class="col-4 social-parent">
-        <div class="social-icon">
-          <a href="#"><i class="fab fa-instagram"></i></a></div>
-        </div>
+      </div>
+      {% endfor %}
     </div>
     <footer>
       <div class="column">
