@@ -67,7 +67,8 @@
     </div>
     <div class="row grid-md">
       {% for thumbnail in thumbnails %}
-      <div class="col-md-4 col-6  thumbnail thumbnail-container">
+      {% set xs = loop.last ? '12' : '6' %}
+      <div class="col-md-4 col-{{xs}}  thumbnail thumbnail-container">
         <img class="img-md" src="{{src_assets}}/{{thumbnail.src}}" alt="">
         <div class="thumbnail thumbnail-caption-container text-center">
           <h5 class="font-sea">{{thumbnail.title}}</h5>

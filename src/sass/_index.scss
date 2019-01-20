@@ -13,12 +13,16 @@ body, h2 {
     }
   }
   
-  #navbar {
-    .navbar-nav {
-      margin-left: auto;
-      .nav-link {
-        color: $primary-color!important;
-        font-weight: bold;
+  .navbar {
+    padding-left: 0px;
+    padding-right: 0px;
+    #navbar {
+      .navbar-nav {
+        margin-left: auto;
+        .nav-link {
+          color: $primary-color!important;
+          font-weight: bold;
+        }
       }
     }
     
@@ -30,7 +34,6 @@ body, h2 {
     
   .sub-nav {
     padding: 2rem;
-    
   }
 
   .price-color {

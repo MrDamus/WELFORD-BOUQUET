@@ -131,14 +131,18 @@ header.sub-header {
   padding: 3rem;
 }
 
-#navbar .navbar-nav {
+.navbar {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navbar #navbar .navbar-nav {
   margin-left: auto;
 }
-#navbar .navbar-nav .nav-link {
+.navbar #navbar .navbar-nav .nav-link {
   color: #555 !important;
   font-weight: bold;
 }
-#navbar #basket {
+.navbar #basket {
   align-self: center;
   margin-left: auto;
 }
