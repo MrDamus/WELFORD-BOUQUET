@@ -1,8 +1,14 @@
-# WELFORD BOUQUET
+![PHP](https://img.shields.io/badge/php-%5E7.1.3-blue.svg)
+![NODE](https://img.shields.io/badge/node-%3E%3D%2011.0.0-brightgreen.svg)
 
+# Update: [PHP!](##PHP)
+
+# WELFORD BOUQUET
 Skill prove for job application
 
-## Getting Started
+## Node.js
+
+### Getting Started
 
 * git clone
 * yarn - install dependencies
@@ -14,15 +20,23 @@ Skill prove for job application
 * node 10+
 * ruby 2.5+
 
-## Deployment
+### Deployment
 
 * yarn build
 
-## Built With
+### Built With
 
-* [Bootsrap](https://getbootstrap.com/docs/4.2/getting-started/introduction/) - The web framework used
+* [Bootsrap](https://getbootstrap.com/docs/4.2/getting-started/introduction/) - Web framework
 * [Parcel](https://parceljs.org/getting_started.html) - Build tool
 
+## PHP
+
+Built using Twig
+
+### Prerequisites
+
+* composer
+* PHP 7.1.3
 
 ## Authors
 
